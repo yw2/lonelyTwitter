@@ -2,10 +2,11 @@ package ca.ualberta.cs.lonelytwitter;
 
 import java.util.Date;
 
-public class lonelyTweetModel
+public abstract class lonelyTweetModel
 {
 	protected String text;
 	protected Date timestamp;
+	protected boolean important;
 	
 	public String getText()
 	{
@@ -42,4 +43,9 @@ public class lonelyTweetModel
 		this.timestamp = new Date();
 	}
 	
+	//abstract method can be used to differentiate between normal and important 
+	public boolean getImportant(){
+		return important;
+	}
+	public abstract void setImportant(boolean important) throws Exception;
 }
