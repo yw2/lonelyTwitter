@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class lonelyTweetModel
 {
-	private String text;
-	private Date timestamp;
+	protected String text;
+	protected Date timestamp;
 	
 	public String getText()
 	{
@@ -13,11 +13,7 @@ public class lonelyTweetModel
 		return text;
 	}
 	
-	public void setText(String text)
-	{
-	
-		this.text = text;
-	}
+	public abstract void setText(String text);
 	
 	public Date getTimestamp()
 	{
@@ -31,6 +27,13 @@ public class lonelyTweetModel
 		this.timestamp = timestamp;
 	}
 
+	public lonelyTweetModel(String text, Date timestamp)
+	{
+
+		super();
+		this.text = text;
+		this.timestamp = new Date();
+	}
 	public lonelyTweetModel(String text)
 	{
 
