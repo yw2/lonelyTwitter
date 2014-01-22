@@ -11,7 +11,7 @@ public class TweetListController
 	{
 
 		super();
-		if (TweetListModel == null) {
+		if (tweetListModel == null) {
 			tweetListModel = new TweetListModel();
 		}
 	}
