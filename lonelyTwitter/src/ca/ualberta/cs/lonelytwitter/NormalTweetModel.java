@@ -17,6 +17,10 @@ public class NormalTweetModel extends LonelyTweetModel {
 		return timestamp;
 	}
 	
+	/*public String getText() {
+		return "Normal! " + super.getText();
+	}*/
+
 	@Override
 	public boolean equals(Object other) {
 		return super.equals(other) && (other instanceof NormalTweetModel);
